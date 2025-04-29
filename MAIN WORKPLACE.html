@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Student Status</title>
+       <style> /* Add this new style for the buffer overlay */    
+        #bufferOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #4169E1;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            z-index: 1000;
+        }
+        .spinner {
+            border: 5px solid #ff006a;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1{
+        text-align: center;
+        }
+    </style>
+</head>
+
+<body style=" background-color: black;">
+<h1 style="color: #f20505;"> Class 10 students status</h1>
+
+<p style="color: #30f01a;">The following status of students are of batch 2081, class-10. It consists of every detail of each students such as:</p>
+
+ <ul>
+     <li style="color: #9b08a8; list-style-type: square;"> Their performance of each exam 1st to pre- SEE.</li>
+     <li style="color: #9b08a8; list-style-type: square;">Their athletic skills.</li>
+     <li style="color: #9b08a8; list-style-type: square;">Their talents in any field.</li>
+     <li style="color: #9b08a8; list-style-type: square;">Their Character and many more...</li>
+</ul>
+
+<style>
+table, th, td {
+          border:1px solid cyan;
+          text align: center:
+} 
+table{
+ margin-left: auto;
+ margin-right: auto;
+}
+</style>
+     <table style=width:20%">
+
+    <tr style="color:pink;">
+       <th>Roll no.</th>
+       <th>Name</th>
+       <th>Details</th>
+    </tr>
+    
+<html>
+<head>
+    <title>Student Status</title>
+    <style>
+        #bufferOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #4169E1;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial;
+            z-index: 1000;
+        }
+        .spinner {
+            border: 5px solid #ff006a;
+            border-top: 5px solid transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        body {
+            color: pink;
+        }
+        table, th, td {
+            border: 1px solid cyan;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            width: 50%;
+        }
+    </style>
+</head>
+            <tr>
+            <td>1.</td>
+            <td>Anubhav Mandal</td>
+            <td><a href="#" onclick="loadWithBuffer('Anubhav.html', 'Anubhav')">View Details</a></td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Aryan Dongol</td>
+            <td><a href="#" onclick="loadWithBuffer('Aryan.html', 'Aryan')">View Details</a></td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>David Shah</td>
+            <td><a href="#" onclick="loadWithBuffer('David.html', 'David')">View Details</a></td>
+        </tr>
+         <tr>
+            <td>4.</td>
+            <td>John.html</td>
+            <td><a href="#" onclick="loadWithBuffer('John.html', 'John')">View Details</a></td>
+        </tr>
+        
+         <tr>
+            <td>5.</td>
+            <td>Oren Rai</td>
+            <td><a href="#" onclick="loadWithBuffer('Oren.html', 'Oren')">View Details</a></td>
+          <tr>
+            <td>6.</td>
+            <td>Shiwam Shrestha</td>
+            <td><a href="#" onclick="loadWithBuffer('Shiwam.html', 'Shiwam')">View Details</a></td>
+        </tr>
+
+         <tr>
+            <td>7.</td>
+            <td>Shubham Shrestha</td>
+            <td><a href="#" onclick="loadWithBuffer('Shubham.html', 'Shubham')">View Details</a></td>
+        </tr>
+        
+         <tr>
+            <td>8.</td>
+            <td>Sujan Magar</td>
+            <td><a href="#" onclick="loadWithBuffer('Sujan.html', 'Sujan')">View Details</a></td>
+        </tr>
+
+           <tr>
+            <td>9.</td>
+            <td>Sumit Karki</td>
+            <td><a href="#" onclick="loadWithBuffer('Sumit.html', 'Sumit')">View Details</a></td>
+        </tr>
+            <tr>
+            <td>10.</td>
+            <td>Ugen Acharaya</td>
+            <td><a href="#" onclick="loadWithBuffer('Ugen.html', 'Ugen')">View Details</a></td>
+        </tr>
+
+
+    </table>
+
+    <div id="bufferOverlay">
+        <div style="text-align: center;">
+            <div class="spinner"></div>
+            <h2 id="loadingText">Loading details...</h2>
+            <p id="redirectText" style="color: #dfeaed;">Redirecting...</p>
+        </div>
+    </div>
+
+    <script>
+        function loadWithBuffer(url, studentName) {
+            // Update the loading message
+            document.getElementById("loadingText").textContent = `Loading ${studentName}'s details...`;
+            document.getElementById("redirectText").textContent = `Redirecting to ${studentName}'s page`;
+            
+            // Show the overlay
+            document.getElementById("bufferOverlay").style.display = "flex";
+            
+            // Redirect after 2 seconds
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000);
+            
+            return false; // Prevent default link behavior
+        }
+    </script>
+
+<p style=" color:#30f01a;">They were the batch of 2081, class 10. For any more detail, contact us:</p>
+<ul>
+<li style="color: #9b08a8; list-style-type: circle;"> Number:98*******</li>
+<li style="color: #9b08a8; list-style-type: circle;"> Email:school@gmail.com</li>
+<li style="color: #9b08a8; list-style-type: circle;">Adress: ****, Nepal</li>
+
+</body>
+</html>
